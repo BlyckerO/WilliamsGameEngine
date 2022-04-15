@@ -11,7 +11,7 @@ public:
 	// Functjions overrijdden from game object 
 	void draw();
 	void update(sf::Time& elapsed);
-
+	sf::FloatRect getCollisionRect();
 private:
 	sf::Sprite sprite_;
 
