@@ -11,6 +11,6 @@ public:
 private: 
 	int timer_ = 0;
 }; 
-
+    
 typedef std::shared_ptr<MeteorSpawner> MeteorSpawnerPtr;
 
