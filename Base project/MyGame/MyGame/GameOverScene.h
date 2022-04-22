@@ -8,6 +8,6 @@ public:
 	GameOverScene(int score); 
 
 }; 
-typedef std::shared_ptr<GameOverScene> GameOVerScenePtr; 
+typedef std::shared_ptr<GameOverScene> GameOverScenePtr; 
 
 
