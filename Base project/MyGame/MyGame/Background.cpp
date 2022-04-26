@@ -1,4 +1,4 @@
-#include "Meteor.h"  
+/*#include "Meteor.h"  
 #include "GameScene.h" 
 #include "Explosion.h" 
 #include "Score.h"
@@ -39,3 +39,4 @@ sf::FloatRect Meteor::getCollisionRect()
 {
 	return sprite_.getGlobalBounds();
 }
+*/

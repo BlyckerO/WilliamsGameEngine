@@ -1,5 +1,5 @@
 
-#pragma once
+/*#pragma once
 #include "Engine/GameEngine.h" 
 
 class Background : public GameObject
@@ -19,4 +19,4 @@ private:
 
 };
 
-typedef std::shared_ptr<Background> MeteorPtr;
+typedef std::shared_ptr<Background> MeteorPtr;*/
