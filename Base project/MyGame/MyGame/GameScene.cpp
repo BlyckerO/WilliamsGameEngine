@@ -2,9 +2,16 @@
 #include "Ship.h"
 #include "MeteorSpawner.h" 
 #include "Score.h" 
-#include "GameOverScene.h"
+#include "GameOverScene.h" 
+#include "Background.h"
 GameScene::GameScene() 
-{
+{ 
+	BackgroundPtr background = std::make_shared<Background>();
+	addGameObject(background);
+	
+	BackgroundPtr background = std::make_shared<Background>();
+	addGameObject(background);
+	
 	ShipPtr ship = std::make_shared<Ship>();
 	addGameObject(ship); 
 
@@ -14,6 +21,7 @@ GameScene::GameScene()
 	ScorePtr score = std::make_shared<Score>(sf::Vector2f(10.0f, 10.0f)); 
 	addGameObject(score);
 
+	
 	
 }
 int GameScene::getScore()
