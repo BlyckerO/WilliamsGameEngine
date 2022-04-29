@@ -6,8 +6,7 @@
 #include "Background.h"
 GameScene::GameScene() 
 { 
-	BackgroundPtr background = std::make_shared<Background>();
-	addGameObject(background);
+	
 	
 	BackgroundPtr background = std::make_shared<Background>();
 	addGameObject(background);
