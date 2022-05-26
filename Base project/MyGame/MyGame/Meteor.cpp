@@ -22,7 +22,7 @@ void Meteor::update(sf::Time& elapsed)
 	int msElapsed = elapsed.asMilliseconds(); 
 	sf::Vector2f pos = sprite_.getPosition(); 
 
-	if (pos.x < sprite_.getGlobalBounds().width * -1)
+	if (pos.y < sprite_.getGlobalBounds().height * -100)
 	{
 		GameScene& scene = (GameScene&)GAME.getCurrentScene(); 
 		scene.decreaseLives();
@@ -31,7 +31,7 @@ void Meteor::update(sf::Time& elapsed)
 	} 
 	else
 	{
-		sprite_.setPosition(sf::Vector2f(pos.x - SPEED * msElapsed, pos.y));
+		sprite_.setPosition(sf::Vector2f(pos.x, pos.y + SPEED * msElapsed));
 	}
 } 
 sf::FloatRect Meteor::getCollisionRect()
@@ -40,7 +40,7 @@ sf::FloatRect Meteor::getCollisionRect()
 } 
 void Meteor::handleCollision(GameObject& otherGameObject)
 {
-	if (otherGameObject.hasTag("laser"))
+	if (otherGameObject.hasTag("lazar"))
 	{
 		otherGameObject.makeDead(); 
 		GameScene& scene = (GameScene&)GAME.getCurrentScene(); 
