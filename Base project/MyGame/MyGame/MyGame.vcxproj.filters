@@ -81,6 +81,9 @@
     <Image Include="Resources\background.png">
       <Filter>Resources</Filter>
     </Image>
+    <Image Include="Resources\background2.png">
+      <Filter>Resources</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\boom.wav">

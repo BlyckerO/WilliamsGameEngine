@@ -9,11 +9,11 @@ const float SPEED = 0.5f;
 
 Background::Background()
 {
-	sprite_.setTexture(GAME.getTexture("Resources/background.png"));
+	sprite_.setTexture(GAME.getTexture("Resources/background2.png"));
 	sprite_.setPosition(0,0);
 	assignTag("Background"); 
 
-	sprite2_.setTexture(GAME.getTexture("Resources/background.png"));
+	sprite2_.setTexture(GAME.getTexture("Resources/background2.png"));
 	sprite2_.setPosition(0, -sprite_.getGlobalBounds().height);
 	
 	
@@ -36,7 +36,7 @@ void Background::update(sf::Time& elapsed)
 
 	if (pos.y >= sprite_.getGlobalBounds().height * 1)
 	{
-		sprite_.setPosition(0, -sprite_.getGlobalBounds().height);
+		sprite_.setPosition(0, pos2.y-sprite_.getGlobalBounds().height);
 	}  
 	else
 	{
@@ -44,7 +44,7 @@ void Background::update(sf::Time& elapsed)
 	}
 	if (pos2.y >= sprite2_.getGlobalBounds().width * 1)
 	{
-		sprite2_.setPosition(0, -sprite2_.getGlobalBounds().height);
+		sprite2_.setPosition(0,pos.y -sprite2_.getGlobalBounds().height);
 	}
 	else
 	{
