@@ -46,5 +46,12 @@ void Ship::update(sf::Time& elapsed)
 
 			LaserPtr laser = std::make_shared<Laser>(sf::Vector2f(laserX, laserY)); 
 			GAME.getCurrentScene().addGameObject(laser);
-		}
-	}
+		} 
+		
+		
+	}  
+sf::FloatRect Ship::getCollisionRect()
+{
+	return sprite_.getGlobalBounds();
+}
+
