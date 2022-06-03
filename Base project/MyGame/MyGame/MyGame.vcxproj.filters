@@ -66,13 +66,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Resources\ship.png">
+    <Image Include="Resources\ship1.png">
       <Filter>Resources</Filter>
     </Image>
     <Image Include="Resources\laser.png">
       <Filter>Resources</Filter>
     </Image>
-    <Image Include="Resources\meteor.png">
+    <Image Include="Resources\meteor1.png">
       <Filter>Resources</Filter>
     </Image>
     <Image Include="Resources\explosion-spritesheet.png">
@@ -82,6 +82,12 @@
       <Filter>Resources</Filter>
     </Image>
     <Image Include="Resources\background2.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Resources\meteor.png">
+      <Filter>Resources</Filter>
+    </Image>
+    <Image Include="Resources\ship.png">
       <Filter>Resources</Filter>
     </Image>
   </ItemGroup>

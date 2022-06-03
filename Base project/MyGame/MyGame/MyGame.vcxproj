@@ -124,7 +124,9 @@
     <Image Include="Resources\explosion-spritesheet.png" />
     <Image Include="Resources\laser.png" />
     <Image Include="Resources\meteor.png" />
+    <Image Include="Resources\meteor1.png" />
     <Image Include="Resources\ship.png" />
+    <Image Include="Resources\ship1.png" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Resources\boom.wav" />
