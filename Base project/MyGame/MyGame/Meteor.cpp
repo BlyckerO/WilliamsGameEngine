@@ -21,11 +21,22 @@ void Meteor::update(sf::Time& elapsed)
 {
 	int msElapsed = elapsed.asMilliseconds(); 
 	sf::Vector2f pos = sprite_.getPosition(); 
+	GameScene& scene = (GameScene&)GAME.getCurrentScene();
+	
+	int incscore = 10;
 
 	
 	
 		sprite_.setPosition(sf::Vector2f(pos.x, pos.y + SPEED * msElapsed));
 	
+		if (pos.y > 600)
+		{
+			
+			scene.increaseScore();
+			makeDead();
+
+		}
+		
 } 
 sf::FloatRect Meteor::getCollisionRect()
 {
@@ -39,7 +50,9 @@ void Meteor::handleCollision(GameObject& otherGameObject)
 		ExplosionPtr explosion = std::make_shared<Explosion>(sprite_.getPosition());
 		scene.addGameObject(explosion);
 
-		scene.decreaseLives();
+		scene.decreaseLives();  
+
+		makeDead();
 	}
 	if (otherGameObject.hasTag("lazar"))
 	{
@@ -51,5 +64,5 @@ void Meteor::handleCollision(GameObject& otherGameObject)
 
 		scene.increaseScore();
 	} 
-	makeDead();
+	
 }

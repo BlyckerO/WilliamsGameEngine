@@ -1,14 +1,14 @@
 #include "Ship.h"  
 #include "Laser.h"
 
-const float SPEED = 0.3f;  
+const float SPEED = 0.4f;  
 const int FIRE_DELAY = 200;
 
 Ship::Ship()
 {
 	sprite_.setTexture(GAME.getTexture("Resources/ship.png")); 
-	sprite_.setPosition(sf::Vector2f(100, 100)); 
-	
+	sprite_.setPosition(sf::Vector2f(400, 400)); 
+	assignTag("ship");
 } 
 void Ship::draw()
 {
@@ -23,10 +23,9 @@ void Ship::update(sf::Time& elapsed)
 		
 		int msElapsed = elapsed.asMilliseconds(); 
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) y -= SPEED * msElapsed; 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) y += SPEED * msElapsed;
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) x -= SPEED * msElapsed;
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) x += SPEED * msElapsed;
+		
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && sprite_.getPosition().x >=0) x -= SPEED * msElapsed;
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && sprite_.getPosition().x < GAME.getRenderWindow().getSize().x - 81) x += SPEED * msElapsed;
 		
 		sprite_.setPosition(sf::Vector2f(x, y)); 
 

@@ -1,6 +1,6 @@
 #include "MeteorSpawner.h" 
 //Numver of milliseconds between meteor spawns 
-const int SPAWN_DELAY = 1000; 
+
 
 void MeteorSpawner::update(sf::Time& elapsed)
 {
@@ -8,7 +8,15 @@ void MeteorSpawner::update(sf::Time& elapsed)
 	int msElapsed = elapsed.asMilliseconds();
 	timer_ -= msElapsed;
 
+	GameScene& scene = (GameScene&)GAME.getCurrentScene();
+	int incscore = 10;
+	
+	if (scene.getScore() % 10 == 0 && SPAWN_DELAY != 1500)
+	{
+		
 
+		SPAWN_DELAY = SPAWN_DELAY - 10;
+	}
 
 	if (timer_ <= 0)
 	{
